@@ -8,6 +8,15 @@
  */
 require( get_template_directory() . '/functions/theme-functions.php' );
 require( get_template_directory() . '/functions/extras.php' );
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
+
 //require( get_template_directory() . '/inc/theme-functions-hier-tags.php' );
 
  

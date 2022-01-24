@@ -712,12 +712,14 @@ body {
 	display: block;
 	width: 250px;
 	margin: 0 auto;
+	text-align: center;
 	@media screen and (min-width: $tabwidth) {
 		width: 230px;
 		margin: 0 0;
 	}
 	@media screen and (min-width: $midwidth) {
 		width: 380px;
+		text-align: left;
 	}
 	@media screen and (min-width: $deskwidth) {
 		width: 400px;

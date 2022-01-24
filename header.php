@@ -60,11 +60,13 @@ var template_url = "<?php bloginfo('template_url'); ?>";
 	<div id="header" class="header-wrapper wrapper clear">
     	<div class="row clear">
     		<div class="left-column">
-				<?php if(is_home()) { ?>
-		            <h1 class="logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-		        <?php } else { ?>
-		            <div class="logo"><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" /></a></div>
-		        <?php } ?>
+    			<?php $tagLine = get_field('logo_subtext', 'option'); ?>
+				<div class="logo" ><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" alt="<?php bloginfo('name'); ?>" /></a>
+
+		            	<?php if($tagLine){
+			            	echo $tagLine;
+			            } ?>
+		        </div>
 	        </div>
 
 	        <div class="right-column">
