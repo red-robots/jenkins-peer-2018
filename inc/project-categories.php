@@ -45,8 +45,8 @@ if($categories) { ?>
 		</div>	
 	<?php } ?>
 		<div class="portcat flexcol sitelogo">
-			<div class="inside clear">
-				<a href="<?php echo get_site_url(); ?>">
+			<div class="inside clear transitional">
+				<a href="https://www.jenkinspeer.com/firm/">
 					<span class="imagebg" style="background-image:url('<?php echo get_bloginfo('template_url');?>/images/JPA-initials.jpg');"></span>
 					<img src="<?php echo get_bloginfo('template_url');?>/images/JPA-initials.jpg" alt="<?php echo get_bloginfo('name'); ?>" />
 				</a><!-- new logo -->

@@ -21,7 +21,11 @@ get_header(); ?>
                         <div class="inside clear"><?php echo $col_right; ?></div>
                     </div>
                     <div class="column left">
-                        <div class="inside clear"><?php echo $col_left; ?></div>
+                        <div class="inside clear">
+                            <a href="https://www.jenkinspeer.com/firm/mission-values/">
+                                <?php echo $col_left; ?>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>  

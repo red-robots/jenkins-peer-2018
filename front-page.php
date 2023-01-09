@@ -19,14 +19,20 @@ get_header(); ?>
 					<div class="column right js-blocks">
 						<div class="inside clear" style="background-image:url('<?php //cho $mission_image['url'] ?>')">
 							<!-- <img src="<?php echo $placeholder ?>" alt="" aria-hidden="true"> -->
-							<img src="<?php echo $mission_image['url'] ?>">
+							<a href="https://www.jenkinspeer.com/firm/mission-values/">
+								<img src="<?php echo $mission_image['url'] ?>">
+							</a>
 						</div>
 					</div>
 					<?php } ?>
 					
 					<?php if ($mission_text) { ?>
 					<div class="column left js-blocks">
-						<div class="inside clear"><?php echo $mission_text; ?></div>
+						<div class="inside clear nolinkstyle">
+							<a href="https://www.jenkinspeer.com/firm/mission-values/">
+								<?php echo $mission_text; ?>
+							</a>
+						</div>
 					</div>
 					<?php } ?>
 				</div>

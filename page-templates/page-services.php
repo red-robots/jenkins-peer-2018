@@ -50,7 +50,7 @@ get_header(); ?>
      
         // thumbnail or custom size that will go
         // into the "thumb" variable.
-        $size = 'medium';
+        $size = 'large';
         $thumb = $image['sizes'][ $size ];
         $width = $image['sizes'][ $size . '-width' ];
         $height = $image['sizes'][ $size . '-height' ];

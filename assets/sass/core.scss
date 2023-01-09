@@ -3411,7 +3411,8 @@ img#wpstats {
 		margin: 0 0px 30px 0;
 	}
 	.service-image {
-		width: 250px;
+		// width: 250px;
+		width: 100%;
 		margin: 0 15px 0px 0;
 	}	
 	.service-right {
@@ -4012,6 +4013,7 @@ img#wpstats {
 		padding-left: 10px;
 		padding-right: 10px;
 		height: 100%;
+		line-height: 0;
 		@media screen and (min-width: $midwidth) {
 			padding-left: 15px;
 			padding-right: 15px;
@@ -5095,4 +5097,19 @@ body.single-portfolio .page-container {
 }
 body.page-template-page-accolades .entry-content {
 	background-color: #fff;
+}
+.nolinkstyle {
+	a {
+		text-decoration: none;
+		color: #666;
+	}
+}
+.transitional {
+	img {
+		transition: all ease .2s;
+		transform: scale(1);
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
 }
