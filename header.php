@@ -23,7 +23,7 @@
 <meta name="viewport" content="width=device-width" />
 
 
-<?php if( is_page( 2647 ) ) { ?>
+<?php if( is_single( 2647 ) ) { ?>
 	<meta name="robots" content="noindex">
 	<!-- We're blocking only her -->
 <?php } ?>
