@@ -63,7 +63,17 @@ var template_url = "<?php bloginfo('template_url'); ?>";
 	
 </head>
 
+<?php 
+	$ann_toggle = get_field('ann_toggle', 'option');
+	$ann_copy = get_field('ann_copy', 'option');
+ ?>
+
 <body <?php body_class(); ?>>
+	<?php if( $ann_toggle == 'on' ) { ?>
+		<div class="announcement">
+			<?php echo $ann_copy; ?>
+		</div>
+	<?php } ?>
 <div id="page" class="pagewrap clear">
 	<div id="header" class="header-wrapper wrapper clear">
     	<div class="row clear">
