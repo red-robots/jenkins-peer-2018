@@ -4476,6 +4476,9 @@ body.single-portfolio .page-container {
 		position: relative;
 		cursor: grab;
 		background-color: #FFF;
+		display: flex; 
+		flex-direction: column;
+		justify-content: center;
 		@media screen and (min-width: $tabwidth) {
 			height: 100%;
 			overflow: hidden;
@@ -4489,6 +4492,51 @@ body.single-portfolio .page-container {
 			height: 100%;
 			visibility: hidden;
 		}
+		iframe {
+			width: 100vw;
+			height: 100%;
+			@media screen and (min-width: 1000px) {
+				width: 80vw;
+			}
+			@media screen and (min-width: 1000px) {
+				width: 70vw;
+			}
+			@media screen and (min-width: 2000px) {
+				width: 60vw;
+			}
+		}
+		// .video-container {
+		//     overflow: hidden;
+		//     position: relative;
+		//     width:100%;
+		// }
+
+		// .video-container::after {
+		//     padding-top: 56.25%;
+		//     display: block;
+		//     content: '';
+		// }
+
+		// .video-container iframe {
+		//     position: absolute;
+		//     top: 0;
+		//     left: 0;
+		//     width: 100%;
+		//     height: 100%;
+		// }
+		// .iwrapper {
+		//     position: relative;
+		//     padding-bottom: 56.25%; /* 16:9 */
+		//     padding-top: 25px;
+		//     height: 0;
+		// }
+		// .iwrapper iframe {
+		//     position: absolute;
+		//     top: 0;
+		//     left: 0;
+		//     width: 100%;
+		//     height: 100%;
+		// }
 		.imagediv {
 			display: block;
 			width: 100%;

@@ -4,17 +4,28 @@
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <?php $galleries = get_field('project_gallery'); ?>
-    <?php if ($galleries) { ?>
+    <?php if ($galleries) { 
+            // echo '<pre>';
+            // print_r($galleries);
+            // echo '</pre>';
+      ?>
       <div class="swiper-container clear">
         <div class="swipe-projects swiper-wrapper">
             <?php $j=1; while(the_repeater_field('project_gallery')): ?>
-              <?php $image = wp_get_attachment_image_src(get_sub_field('project_images'), 'full'); ?>
-              <?php if ($image) { ?>
+              <?php $image = wp_get_attachment_image_src(get_sub_field('project_images'), 'full'); 
+                    $embed = get_sub_field('video_embed');
+              ?>
+              
                 <div class="slick-slide swipeImg<?php echo ($j==1) ? ' slick-current slick-active slick-center':''?>">
-                  <div class="imagediv" style="background-image:url('<?php echo $image[0]; ?>')"></div>
-                  <img src="<?php echo $image[0]; ?>" alt="<?php  the_sub_field('title');?>" />
+                  <?php if($embed) { ?>
+                    <!-- <div class="video-container"></div> -->
+                      <?php echo $embed; ?>
+                  <?php } elseif ($image) { ?>
+                    <div class="imagediv" style="background-image:url('<?php echo $image[0]; ?>')"></div>
+                    <img src="<?php echo $image[0]; ?>" alt="<?php  the_sub_field('title');?>" />
+                  <?php } ?>
                 </div>
-              <?php } ?>
+              
             <?php $j++; endwhile; ?>
         </div>
       </div>

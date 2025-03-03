@@ -15,16 +15,16 @@ jQuery(document).ready(function ($) {
       /*columnWidth: 200,*/
       gutter: 30
     }
-  }); // layout Isotope again after all images have loaded
-
+  });
+  // layout Isotope again after all images have loaded
   $container.imagesLoaded(function () {
     $container.isotope('layout');
   });
   $('.flexslider').flexslider({
     selector: '.slides > .slide-group',
     // directionNav: false,
-    controlsContainer: "#slide-controller" // smoothHeight: true
-
+    controlsContainer: "#slide-controller"
+    // smoothHeight: true
   });
   $(document).on("click", "#toggleMenu", function () {
     $(this).toggleClass('open');
@@ -32,18 +32,18 @@ jQuery(document).ready(function ($) {
   });
   $('.js-blocks').matchHeight();
   new WOW().init();
+
   /*
   *
   *	Smooth Scroll to Anchor
   *
   ------------------------------------*/
-
   $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       // Figure out element to scroll to
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']'); // Does a scroll target exist?
-
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
@@ -54,21 +54,21 @@ jQuery(document).ready(function ($) {
           // Must change focus!
           var $target = $(target);
           $target.focus();
-
           if ($target.is(":focus")) {
             // Checking if the target was focused
             return false;
           } else {
             $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-
             $target.focus(); // Set focus again
           }
-
           ;
         });
       }
     }
-  }); // document.addEventListener('facetwp-refresh', function() {
+  });
+
+  // document.addEventListener('facetwp-refresh', function() {
+
   //     jQuery.ajax({
   //         method: 'post',
   //         url: ipAjaxVar.ajaxurl,
@@ -79,21 +79,22 @@ jQuery(document).ready(function ($) {
   //     }).done(function(msg) {
   //         // Do something when done
   //     });
+
   //     e.preventDefault();
   // });
 
   /* Slick Carousel */
-
   $('.swipe-projects').slick({
     dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
     centerMode: true,
-    variableWidth: true
+    variableWidth: true,
+    adaptiveHeight: true
   });
-  /* Portfolio Filter */
 
+  /* Portfolio Filter */
   if ($("#portfolioFilter").length > 0) {
     //var filter_params = '';
     var currentURL = $("#portfolioFilter").attr("data-currentURL");
@@ -114,7 +115,6 @@ jQuery(document).ready(function ($) {
       $("#filterResult").load(url + ' #filterContent', function () {});
     });
   }
-
   $('.select-style').select2({
     minimumResultsForSearch: -1,
     selectOnClose: true
